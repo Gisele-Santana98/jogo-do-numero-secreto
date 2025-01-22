@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box; /* Define que o modelo de caixa de todos os elementos será o border-box. */
+    margin: 0; /* Remove a margem padrão de todos os elementos. */
+    padding: 0; /* Remove o preenchimento interno padrão de todos os elementos. */
+    color: white; /* Define a cor do texto para branco para todos os elementos. */
+}
+
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,118,0.9248074229691877) 35%, rgba(0,212,255,1) 100%); /* Define um fundo com um gradiente linear. */
+    height: 100vh; /* Define a altura do body para ocupar 100% da altura da tela. */
+    display: flex; /* Usa flexbox para o layout. */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro da tela. */
+    justify-content: center; /* Alinha o conteúdo horizontalmente no centro da tela. */
+}
+body::before {
+    background-image: url("img/code.png"); /* Adiciona uma imagem de fundo. */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita. */
+    background-position: right; /* Coloca a imagem à direita do body. */
+    content: ""; /* Necessário para que a pseudo-classe ::before seja visível. */
+    display: block; /* Faz com que a pseudo-classe tenha um bloco e ocupe espaço. */
+    position: absolute; /* Posiciona a pseudo-classe de forma absoluta em relação ao body. */
+    width: 100%; /* Faz com que a pseudo-classe ocupe toda a largura do body. */
+    height: 100%; /* Faz com que a pseudo-classe ocupe toda a altura do body. */
+    opacity: 0.4; /* Define a opacidade da pseudo-classe para 40%. */
+}
+.container {
+    width: 80%; /* Define a largura da container como 80% da largura da tela. */
+    height: 80%; /* Define a altura da container como 80% da altura da tela. */
+    display: flex; /* Usa flexbox para organizar os elementos dentro da container. */
+    align-items: center; /* Alinha os elementos verticalmente ao centro da container. */
+    justify-content: space-between; /* Coloca os elementos da container com espaçamento entre eles. */
+    border-radius: 24px; /* Aplica bordas arredondadas de 24px a toda a container. */
+    border: 1px solid #1875E8; /* Adiciona uma borda de 1px de cor azul (#1875E8) à container. */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Adiciona uma sombra ao redor da container. */
+    background-image: url("img/Ruido.png"); /* Adiciona uma imagem de fundo (Ruido.png) à container. */
+    background-size: 100% 100%; /* Ajusta a imagem de fundo para cobrir toda a container, sem distorção. */
+    position: relative; /* Define a posição da container como relativa para os elementos filhos posicionados de forma absoluta. */
+}
+.container__conteudo {
+    display: flex; /* Usa flexbox para organizar os itens dentro de .container__conteudo. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    position: absolute; /* Posiciona .container__conteudo de forma absoluta dentro da container. */
+    bottom: 0; /* Posiciona .container__conteudo na parte inferior da container. */
+}
+.container__informacoes {
+    flex: 1; /* Faz com que o elemento ocupe todo o espaço disponível, dividindo igualmente com os outros elementos irmãos. */
+    padding: 3rem; /* Adiciona preenchimento interno de 3rem ao redor do conteúdo. */
+}
+.container__botao {
+    border-radius: 16px; /* Aplica bordas arredondadas de 16px ao botão. */
+    background: #1875E8; /* Define a cor de fundo do botão como azul (#1875E8). */
+    padding: 16px 24px; /* Define o preenchimento interno do botão (16px na vertical e 24px na horizontal). */
+    width: 100%; /* Faz com que o botão ocupe toda a largura disponível da container. */
+    font-size: 24px; /* Define o tamanho da fonte do botão como 24px. */
+    font-weight: 700; /* Define o peso da fonte como 700 (negrito). */
+    border: none; /* Remove a borda padrão do botão. */
+    margin-top: 2rem; /* Adiciona uma margem de 2rem acima do botão. */
+}
+.container__texto {
+    margin: 16px 0 16px 0; /* Adiciona uma margem de 16px nas partes superior e inferior do texto. */
+}
+.container__texto-azul {
+    color: #1875E8; /* Define a cor do texto para azul (#1875E8). */
+}
+.container__input {
+    width: 100%; /* Faz com que o campo de entrada ocupe toda a largura disponível. */
+    height: 72px; /* Define a altura do campo de entrada para 72px. */
+    border-radius: 16px; /* Aplica bordas arredondadas de 16px ao campo de entrada. */
+    background-color: #FFF; /* Define a cor de fundo do campo de entrada como branco. */
+    border: none; /* Remove a borda padrão do campo de entrada. */
+    color: #1875E8; /* Define a cor do texto do campo de entrada para azul (#1875E8). */
+    padding: 2rem; /* Adiciona um preenchimento interno de 2rem ao campo de entrada. */
+    font-size: 24px; /* Define o tamanho da fonte do campo de entrada para 24px. */
+    font-weight: 700; /* Define o peso da fonte para negrito. */
+    font-family: 'Inter', sans-serif; /* Define a fonte do campo de entrada como 'Inter' ou uma fonte sans-serif. */
+}
+.container__botoes {
+    display: flex; /* Usa flexbox para organizar os botões dentro da container__botoes. */
+    gap: 2em; /* Adiciona um espaçamento de 2em entre os botões. */
+}
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Define a fonte do título h1 como 'Chakra Petch' ou uma fonte sans-serif. */
+    font-size: 72px; /* Define o tamanho da fonte do título h1 para 72px. */
+    padding-bottom: 3rem; /* Adiciona um preenchimento inferior de 3rem ao título h1. */
+}
+p,
+button {
+    font-family: 'Inter', sans-serif; /* Define a fonte dos elementos <p> e <button> como 'Inter' ou sans-serif. */
+}
+.texto__paragrafo {
+    font-size: 32px; /* Define o tamanho da fonte do parágrafo para 32px. */
+    font-weight: 400; /* Define o peso da fonte do parágrafo como normal (400). */
+}
+button:disabled {
+    background-color: gray; /* Quando o botão estiver desabilitado, seu fundo ficará cinza. */
+}
+@media screen and (max-width: 1250px) {/* Media query para telas com largura máxima de 1250px, para telas menores). */
+    h1 {
+        font-size: 50px; /* Reduz o tamanho da fonte do título h1 para 50px em telas menores. */
+    }
+    .container__botao {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão para 16px em telas menores. */
+    }
+    .texto__paragrafo {
+        font-size: 24px; /* Reduz o tamanho da fonte do parágrafo para 24px em telas menores. */
+    }
+    .container__imagem-pessoa {
+        display: none; /* Esconde a imagem de uma pessoa (assumido que exista essa classe) em telas menores. */
+    }
+    .container__conteudo {
+        display: block; /* Muda a disposição do conteúdo para bloco (ao invés de flex) em telas menores. */
+        position: inherit; /* Faz com que a posição da .container__conteudo herde a posição padrão (static) em telas menores. */
+    }
+    .container__informacoes {
+        padding: 1rem; /* Reduz o preenchimento interno para 1rem em telas menores. */
+    }
+}

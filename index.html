@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento. -->
+<html lang="pt-br"> <!-- Especifica o idioma principal da página. -->
+
+<head> 
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres, que é padrão para a maioria dos sites. --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva da página, ajustando a largura da página ao tamanho da tela do dispositivo.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Estabelece uma conexão antecipada com o servidor Google Fonts, melhorando o desempenho ao carregar fontes. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Estabelece uma conexão antecipada com o servidor onde as fontes do Google são hospedadas, com o atributo "crossorigin" permitindo solicitações sem a necessidade de credenciais. -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Faz a inclusão das fontes 'Chakra Petch' (pesada, peso 700) e 'Inter' (pesos 400 e 700) diretamente do Google Fonts, com a exibição das fontes configurada para 'swap' (substituição rápida se a fonte não carregar a tempo). -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo externo style.css para aplicar os estilos ao HTML da página. -->
+    <title>JS Game</title> <!-- Define o título da página que será exibido na aba do navegador.-->
+</head>
+
+
+<body><!-- Início do conteúdo do corpo da página. Tudo que será visível para o usuário. -->
+    <div class="container"> <!-- Criação de uma div com a classe "container", que irá agrupar o conteúdo central da página. -->
+        <div class="container__conteudo"> <!-- Outra div com classe para agrupar o conteúdo de informações e interações. -->
+            <div class="container__informacoes"> <!-- Div para armazenar as informações e elementos interativos, como texto, input e botões. -->
+                <div class="container__texto"> <!-- Div para conter o título e o parágrafo de texto. -->
+                    <h1></h1><!-- Título vazio, que será preenchido dinamicamente por JavaScript. -->
+                    <p class="texto__paragrafo"></p> <!-- Parágrafo vazio com classe, que será preenchido dinamicamente. -->
+                </div> <!-- Fim da div container__texto -->
+
+                <input type="number" min="1" max="10" class="container__input"> <!-- Um campo de entrada tipo número, com valores possíveis entre 1 e 10, para que o usuário insira um chute. A classe "container__input" aplica os estilos definidos no CSS. -->
+                <div class="chute container__botoes"> <!-- Div que agrupa os botões de interação. A classe "chute" é usada para adicionar estilos e identificar o grupo de botões. -->
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button> <!-- Um botão que chama a função JavaScript "verificarChute()" quando clicado. -->
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                    <!-- Botão que chama a função "reiniciarJogo()" ao ser clicado.-->
+                </div> <!-- Fim da div chute container__botoes -->
+            </div> <!-- Fim da div container__informacoes -->
+            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" /> 
+        </div> 
+    </div>
+
+    <script src="app.js" defer></script> <!-- Inclui o arquivo JavaScript "app.js" que contém a lógica do jogo. O atributo "defer" faz com que o script seja carregado após o carregamento do conteúdo HTML, sem bloquear a renderização da página. -->
+
+</body>
